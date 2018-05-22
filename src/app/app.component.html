@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container"  >
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3" id="col1">
+      <form>
+        <div class="form-group">
+          <input type="text"  class="form-control" id="amountOfValues" placeholder="Wprowadź wartość" [value]="amount" (input)="amount = $event.target.value">
+          <small id="emailHelp" class="form-text text-muted">Wprowadź liczbę oznaczającą ilość losowanych liczb.</small>
+        </div>
+      </form>
+      <button (click)="generateList($event)" type="button" class="btn btn-outline-primary">losuj</button>
+      <ul>
+        <li *ngFor="let item of items">
+          {{ item.toString() }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-3" id="col2">
+      <button [disabled]="!isList" (click)="Average($event)" type="button" class="btn btn-outline-primary">licz</button>
+      <label for="average">średnia z wylosowanych liczb</label>
+      <input type="text" readonly class="form-control" id="average" value="{{average}}" >
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+  </div>

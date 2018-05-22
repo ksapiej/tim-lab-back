@@ -1,0 +1,15 @@
+div.row {
+  margin-top: 80px;
+
+}
+
+#col1 {
+  border: solid;
+  border-right: dotted;
+  border-width: 1px;
+}
+#col2 {
+  border: solid;
+  border-left: dotted;
+  border-width: 1px;
+}
